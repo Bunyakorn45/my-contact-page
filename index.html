@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — Hello World</title>
+  <title>Portfolio — ผลงานของผม</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,39 +14,28 @@
 
   <canvas id="particles"></canvas>
 
-  <!-- NAVBAR -->
+  <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
-    <a href="#" class="nav-logo">
-      <i class="ph-bold ph-code"></i> <span>Hello World</span>
-    </a>
+    <a href="#" class="nav-logo"><i class="ph-bold ph-code"></i> <span>Portfolio</span></a>
     <ul class="nav-links">
       <li><a href="#hero">หน้าแรก</a></li>
       <li><a href="#about">เกี่ยวกับ</a></li>
       <li><a href="#skills">ทักษะ</a></li>
+      <li><a href="#projects">ผลงาน</a></li>
       <li><a href="#contact">ติดต่อ</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="menu">
-      <i class="ph-bold ph-list"></i>
-    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="menu"><i class="ph-bold ph-list"></i></button>
   </nav>
 
-  <!-- HERO -->
+  <!-- ========== HERO ========== -->
   <section class="hero" id="hero">
     <div class="hero-content fade-up">
-      <p class="hero-greeting">สวัสดีครับ 👋 ผมชื่อ</p>
-      <h1 class="hero-name">Hello World</h1>
-      <p class="hero-role">
-        <span class="typed" id="typed"></span><span class="cursor">|</span>
-      </p>
+      <p class="hero-greeting">สวัสดีครับ 👋 ยินดีต้อนรับ</p>
+      <h1 class="hero-name">Creative Developer</h1>
+      <p class="hero-role"><span class="typed" id="typed"></span><span class="cursor">|</span></p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary"><i class="ph-bold ph-envelope-simple"></i> ติดต่อผม</a>
-        <a href="#about" class="btn btn-outline"><i class="ph-bold ph-arrow-down"></i> ดูเพิ่มเติม</a>
-      </div>
-      <div class="hero-socials">
-        <a href="https://github.com/Bunyakorn45" target="_blank" aria-label="GitHub"><i class="ph-bold ph-github-logo"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a>
-        <a href="#" aria-label="Facebook"><i class="ph-bold ph-facebook-logo"></i></a>
-        <a href="#" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a>
+        <a href="#projects" class="btn btn-primary"><i class="ph-bold ph-folder-open"></i> ดูผลงาน</a>
+        <a href="#contact" class="btn btn-outline"><i class="ph-bold ph-chat-dots"></i> ติดต่อ</a>
       </div>
     </div>
     <div class="hero-orbs">
@@ -56,138 +45,247 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ========== ABOUT ========== -->
   <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title fade-up"><i class="ph-bold ph-user-circle"></i> เกี่ยวกับผม</h2>
+      <h2 class="section-title fade-up"><i class="ph-bold ph-user-circle"></i> เกี่ยวกับ</h2>
       <div class="about-grid">
         <div class="about-image fade-up">
-          <div class="img-placeholder">
-            <i class="ph-bold ph-user"></i>
-            <span>รูปภาพ</span>
-          </div>
+          <div class="img-placeholder"><i class="ph-bold ph-user"></i><span>รูปภาพ</span></div>
         </div>
         <div class="about-text fade-up">
-          <p>
-            ผมเป็นนักพัฒนาเว็บที่หลงใหลในการสร้างประสบการณ์ดิจิทัลที่สวยงามและใช้งานง่าย
-            ผมชอบเรียนรู้เทคโนโลยีใหม่ ๆ และนำมาประยุกต์ใช้ในโปรเจกต์ต่าง ๆ
-          </p>
+          <p>นักพัฒนาเว็บที่หลงใหลในการสร้างประสบการณ์ดิจิทัลที่สวยงามและใช้งานง่าย ชอบเรียนรู้เทคโนโลยีใหม่ ๆ และนำมาประยุกต์ใช้ในโปรเจกต์ต่าง ๆ</p>
           <div class="about-stats">
-            <div class="stat-card">
-              <span class="stat-number" data-target="5">0</span>+
-              <span class="stat-label">โปรเจกต์</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-number" data-target="2">0</span>+
-              <span class="stat-label">ปีประสบการณ์</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-number" data-target="10">0</span>+
-              <span class="stat-label">ทักษะ</span>
-            </div>
+            <div class="stat-card"><span class="stat-number" data-target="12">0</span>+<span class="stat-label">โปรเจกต์</span></div>
+            <div class="stat-card"><span class="stat-number" data-target="3">0</span>+<span class="stat-label">ปีประสบการณ์</span></div>
+            <div class="stat-card"><span class="stat-number" data-target="15">0</span>+<span class="stat-label">ทักษะ</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- ========== SKILLS ========== -->
   <section class="section section-alt" id="skills">
     <div class="container">
       <h2 class="section-title fade-up"><i class="ph-bold ph-lightning"></i> ทักษะ</h2>
       <div class="skills-grid">
-        <div class="skill-card fade-up" style="--card-accent:#ff6b6b;">
-          <i class="ph-bold ph-file-html"></i>
-          <h3>HTML</h3>
-          <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
-        </div>
-        <div class="skill-card fade-up" style="--card-accent:#4ecdc4;">
-          <i class="ph-bold ph-file-css"></i>
-          <h3>CSS</h3>
-          <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
-        </div>
-        <div class="skill-card fade-up" style="--card-accent:#ffe66d;">
-          <i class="ph-bold ph-file-js"></i>
-          <h3>JavaScript</h3>
-          <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
-        </div>
-        <div class="skill-card fade-up" style="--card-accent:#a29bfe;">
-          <i class="ph-bold ph-atom"></i>
-          <h3>React</h3>
-          <div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div>
-        </div>
-        <div class="skill-card fade-up" style="--card-accent:#fd79a8;">
-          <i class="ph-bold ph-database"></i>
-          <h3>Database</h3>
-          <div class="skill-bar"><div class="skill-fill" data-width="65%"></div></div>
-        </div>
-        <div class="skill-card fade-up" style="--card-accent:#00cec9;">
-          <i class="ph-bold ph-git-branch"></i>
-          <h3>Git</h3>
-          <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
-        </div>
+        <div class="skill-card fade-up" style="--card-accent:#ff6b6b;"><i class="ph-bold ph-file-html"></i><h3>HTML</h3><div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div></div>
+        <div class="skill-card fade-up" style="--card-accent:#4ecdc4;"><i class="ph-bold ph-file-css"></i><h3>CSS</h3><div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div></div>
+        <div class="skill-card fade-up" style="--card-accent:#ffe66d;"><i class="ph-bold ph-file-js"></i><h3>JavaScript</h3><div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div></div>
+        <div class="skill-card fade-up" style="--card-accent:#a29bfe;"><i class="ph-bold ph-atom"></i><h3>React</h3><div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div></div>
+        <div class="skill-card fade-up" style="--card-accent:#fd79a8;"><i class="ph-bold ph-database"></i><h3>Database</h3><div class="skill-bar"><div class="skill-fill" data-width="65%"></div></div></div>
+        <div class="skill-card fade-up" style="--card-accent:#00cec9;"><i class="ph-bold ph-git-branch"></i><h3>Git</h3><div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
+  <!-- ========== PROJECTS (เน้นเยอะ ๆ) ========== -->
+  <section class="section" id="projects">
     <div class="container">
-      <h2 class="section-title fade-up"><i class="ph-bold ph-chat-dots"></i> ติดต่อผม</h2>
-      <p class="section-desc fade-up">เลือกช่องทางที่สะดวกได้เลยครับ 👇</p>
+      <h2 class="section-title fade-up"><i class="ph-bold ph-folder-open"></i> ผลงาน</h2>
 
+      <!-- Filter Buttons -->
+      <div class="filter-bar fade-up">
+        <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+        <button class="filter-btn" data-filter="web">เว็บไซต์</button>
+        <button class="filter-btn" data-filter="app">แอปพลิเคชัน</button>
+        <button class="filter-btn" data-filter="design">ออกแบบ</button>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1 -->
+        <div class="project-card fade-up" data-category="web">
+          <div class="project-thumb" style="--thumb:#ff6b6b;">
+            <i class="ph-bold ph-storefront"></i>
+            <div class="project-overlay">
+              <button class="project-detail-btn" data-project="1"><i class="ph-bold ph-eye"></i> ดูรายละเอียด</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span style="--tag:#ff6b6b;">HTML</span><span style="--tag:#4ecdc4;">CSS</span><span style="--tag:#ffe66d;">JS</span></div>
+            <h3>E-Commerce Website</h3>
+            <p>เว็บไซต์ร้านค้าออนไลน์พร้อมระบบตะกร้าสินค้าและชำระเงิน</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card fade-up" data-category="app">
+          <div class="project-thumb" style="--thumb:#4ecdc4;">
+            <i class="ph-bold ph-kanban"></i>
+            <div class="project-overlay">
+              <button class="project-detail-btn" data-project="2"><i class="ph-bold ph-eye"></i> ดูรายละเอียด</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span style="--tag:#a29bfe;">React</span><span style="--tag:#00cec9;">Node.js</span></div>
+            <h3>Task Management App</h3>
+            <p>แอปจัดการงานแบบ Kanban board พร้อม drag &amp; drop</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card fade-up" data-category="design">
+          <div class="project-thumb" style="--thumb:#a29bfe;">
+            <i class="ph-bold ph-palette"></i>
+            <div class="project-overlay">
+              <button class="project-detail-btn" data-project="3"><i class="ph-bold ph-eye"></i> ดูรายละเอียด</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span style="--tag:#fd79a8;">Figma</span><span style="--tag:#ffe66d;">UI/UX</span></div>
+            <h3>Mobile Banking UI</h3>
+            <p>ออกแบบ UI แอปธนาคารบนมือถือ พร้อม prototype</p>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card fade-up" data-category="web">
+          <div class="project-thumb" style="--thumb:#fd79a8;">
+            <i class="ph-bold ph-newspaper"></i>
+            <div class="project-overlay">
+              <button class="project-detail-btn" data-project="4"><i class="ph-bold ph-eye"></i> ดูรายละเอียด</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span style="--tag:#4ecdc4;">Next.js</span><span style="--tag:#ff6b6b;">MDX</span></div>
+            <h3>Personal Blog</h3>
+            <p>บล็อกส่วนตัวพร้อมระบบ Markdown และ dark mode</p>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card fade-up" data-category="app">
+          <div class="project-thumb" style="--thumb:#ffe66d;">
+            <i class="ph-bold ph-chat-circle-text"></i>
+            <div class="project-overlay">
+              <button class="project-detail-btn" data-project="5"><i class="ph-bold ph-eye"></i> ดูรายละเอียด</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span style="--tag:#a29bfe;">React</span><span style="--tag:#00cec9;">Socket.io</span></div>
+            <h3>Realtime Chat App</h3>
+            <p>แอปแชทแบบเรียลไทม์พร้อมห้องสนทนาและ emoji</p>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card fade-up" data-category="design">
+          <div class="project-thumb" style="--thumb:#00cec9;">
+            <i class="ph-bold ph-device-mobile"></i>
+            <div class="project-overlay">
+              <button class="project-detail-btn" data-project="6"><i class="ph-bold ph-eye"></i> ดูรายละเอียด</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span style="--tag:#fd79a8;">Figma</span><span style="--tag:#ffe66d;">Prototype</span></div>
+            <h3>Food Delivery UI</h3>
+            <p>ออกแบบ UI สั่งอาหารออนไลน์พร้อม animation prototype</p>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project-card fade-up" data-category="web">
+          <div class="project-thumb" style="--thumb:#6c5ce7;">
+            <i class="ph-bold ph-chart-line-up"></i>
+            <div class="project-overlay">
+              <button class="project-detail-btn" data-project="7"><i class="ph-bold ph-eye"></i> ดูรายละเอียด</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span style="--tag:#4ecdc4;">Vue.js</span><span style="--tag:#ffe66d;">Chart.js</span></div>
+            <h3>Analytics Dashboard</h3>
+            <p>แดชบอร์ดแสดงข้อมูล analytics พร้อมกราฟแบบ interactive</p>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="project-card fade-up" data-category="app">
+          <div class="project-thumb" style="--thumb:#e17055;">
+            <i class="ph-bold ph-music-notes"></i>
+            <div class="project-overlay">
+              <button class="project-detail-btn" data-project="8"><i class="ph-bold ph-eye"></i> ดูรายละเอียด</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span style="--tag:#a29bfe;">React</span><span style="--tag:#ff6b6b;">API</span></div>
+            <h3>Music Player</h3>
+            <p>เครื่องเล่นเพลงออนไลน์พร้อม playlist และ equalizer</p>
+          </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="project-card fade-up" data-category="web">
+          <div class="project-thumb" style="--thumb:#0984e3;">
+            <i class="ph-bold ph-globe"></i>
+            <div class="project-overlay">
+              <button class="project-detail-btn" data-project="9"><i class="ph-bold ph-eye"></i> ดูรายละเอียด</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span style="--tag:#00cec9;">Tailwind</span><span style="--tag:#fd79a8;">Laravel</span></div>
+            <h3>Company Website</h3>
+            <p>เว็บไซต์บริษัทพร้อมระบบจัดการเนื้อหา CMS</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECT MODAL ========== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose"><i class="ph-bold ph-x"></i></button>
+      <div class="modal-thumb" id="modalThumb"><i id="modalIcon"></i></div>
+      <div class="modal-body">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <div class="modal-tech" id="modalTech"></div>
+        <div class="modal-links">
+          <a href="#" class="btn btn-primary btn-sm" id="modalDemo"><i class="ph-bold ph-globe"></i> Live Demo</a>
+          <a href="#" class="btn btn-outline btn-sm" id="modalCode"><i class="ph-bold ph-github-logo"></i> Source Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <h2 class="section-title fade-up"><i class="ph-bold ph-chat-dots"></i> ติดต่อ</h2>
+      <p class="section-desc fade-up">เลือกช่องทางที่สะดวกได้เลยครับ 👇</p>
       <div class="contact-links-grid">
         <a href="mailto:your-email@example.com" class="contact-link-card fade-up" style="--accent:#ff6b6b;">
           <div class="contact-link-icon"><i class="ph-bold ph-envelope-simple"></i></div>
-          <div class="contact-link-text">
-            <h3>อีเมล</h3>
-            <p>your-email@example.com</p>
-          </div>
+          <div class="contact-link-text"><h3>อีเมล</h3><p>your-email@example.com</p></div>
           <span class="contact-link-arrow"><i class="ph-bold ph-arrow-right"></i></span>
         </a>
-
         <a href="https://line.me/ti/p/YOUR_LINE_ID" target="_blank" rel="noopener" class="contact-link-card fade-up" style="--accent:#06c755;">
           <div class="contact-link-icon"><i class="ph-bold ph-chat-circle-dots"></i></div>
-          <div class="contact-link-text">
-            <h3>LINE</h3>
-            <p>@your-line-id</p>
-          </div>
+          <div class="contact-link-text"><h3>LINE</h3><p>@your-line-id</p></div>
           <span class="contact-link-arrow"><i class="ph-bold ph-arrow-right"></i></span>
         </a>
-
         <a href="https://m.me/YOUR_FB_USERNAME" target="_blank" rel="noopener" class="contact-link-card fade-up" style="--accent:#0084ff;">
           <div class="contact-link-icon"><i class="ph-bold ph-messenger-logo"></i></div>
-          <div class="contact-link-text">
-            <h3>Messenger</h3>
-            <p>facebook.com/your-name</p>
-          </div>
+          <div class="contact-link-text"><h3>Messenger</h3><p>facebook.com/your-name</p></div>
           <span class="contact-link-arrow"><i class="ph-bold ph-arrow-right"></i></span>
         </a>
-
         <a href="https://instagram.com/YOUR_IG" target="_blank" rel="noopener" class="contact-link-card fade-up" style="--accent:#e1306c;">
           <div class="contact-link-icon"><i class="ph-bold ph-instagram-logo"></i></div>
-          <div class="contact-link-text">
-            <h3>Instagram</h3>
-            <p>@your-instagram</p>
-          </div>
+          <div class="contact-link-text"><h3>Instagram</h3><p>@your-instagram</p></div>
           <span class="contact-link-arrow"><i class="ph-bold ph-arrow-right"></i></span>
         </a>
-
         <a href="tel:+66XXXXXXXXX" class="contact-link-card fade-up" style="--accent:#00cec9;">
           <div class="contact-link-icon"><i class="ph-bold ph-phone"></i></div>
-          <div class="contact-link-text">
-            <h3>โทรศัพท์</h3>
-            <p>0XX-XXX-XXXX</p>
-          </div>
+          <div class="contact-link-text"><h3>โทรศัพท์</h3><p>0XX-XXX-XXXX</p></div>
           <span class="contact-link-arrow"><i class="ph-bold ph-arrow-right"></i></span>
         </a>
-
-        <a href="https://github.com/Bunyakorn45" target="_blank" rel="noopener" class="contact-link-card fade-up" style="--accent:#a29bfe;">
+        <a href="https://github.com/" target="_blank" rel="noopener" class="contact-link-card fade-up" style="--accent:#a29bfe;">
           <div class="contact-link-icon"><i class="ph-bold ph-github-logo"></i></div>
-          <div class="contact-link-text">
-            <h3>GitHub</h3>
-            <p>Aries45</p>
-          </div>
+          <div class="contact-link-text"><h3>GitHub</h3><p>github.com/your-username</p></div>
           <span class="contact-link-arrow"><i class="ph-bold ph-arrow-right"></i></span>
         </a>
       </div>
@@ -195,14 +293,10 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 Aries45 — สร้างด้วย ❤️</p>
-  </footer>
+  <footer class="footer"><p>© 2026 Portfolio — สร้างด้วย ❤️</p></footer>
 
   <!-- BACK TO TOP -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="ph-bold ph-arrow-up"></i>
-  </button>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="ph-bold ph-arrow-up"></i></button>
 
   <script src="script.js"></script>
 </body>
