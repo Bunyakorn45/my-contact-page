@@ -1,10 +1,11 @@
 /* ╔══════════════════════════════════════════╗
-   ║          PARTICLES BACKGROUND            ║
-   ╚════��═════════════════════════════════════╝ */
+   ║          PARTICLES — COLORFUL            ║
+   ╚══════════════════════════════════════════╝ */
 ;(function () {
   const canvas = document.getElementById('particles')
   const ctx = canvas.getContext('2d')
   let w, h, particles
+  const colors = ['#ff6b6b','#4ecdc4','#ffe66d','#a29bfe','#fd79a8','#00cec9']
 
   function resize () {
     w = canvas.width = window.innerWidth
@@ -18,10 +19,11 @@
     reset () {
       this.x = Math.random() * w
       this.y = Math.random() * h
-      this.r = Math.random() * 2 + 0.5
-      this.dx = (Math.random() - 0.5) * 0.4
-      this.dy = (Math.random() - 0.5) * 0.4
-      this.alpha = Math.random() * 0.5 + 0.15
+      this.r = Math.random() * 2.2 + 0.5
+      this.dx = (Math.random() - 0.5) * 0.45
+      this.dy = (Math.random() - 0.5) * 0.45
+      this.color = colors[Math.floor(Math.random() * colors.length)]
+      this.alpha = Math.random() * 0.5 + 0.2
     }
     update () {
       this.x += this.dx
@@ -32,8 +34,12 @@
     draw () {
       ctx.beginPath()
       ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2)
-      ctx.fillStyle = `rgba(108,99,255,${this.alpha})`
+      ctx.fillStyle = this.color.replace(')', `,${this.alpha})`).replace('rgb', 'rgba')
+      // fallback: just use hex with globalAlpha
+      ctx.globalAlpha = this.alpha
+      ctx.fillStyle = this.color
       ctx.fill()
+      ctx.globalAlpha = 1
     }
   }
 
@@ -49,13 +55,15 @@
         const dx = particles[i].x - particles[j].x
         const dy = particles[i].y - particles[j].y
         const dist = dx * dx + dy * dy
-        if (dist < 18000) {
+        if (dist < 16000) {
           ctx.beginPath()
           ctx.moveTo(particles[i].x, particles[i].y)
           ctx.lineTo(particles[j].x, particles[j].y)
-          ctx.strokeStyle = `rgba(108,99,255,${0.08 * (1 - dist / 18000)})`
+          ctx.strokeStyle = particles[i].color
+          ctx.globalAlpha = 0.07 * (1 - dist / 16000)
           ctx.lineWidth = 0.6
           ctx.stroke()
+          ctx.globalAlpha = 1
         }
       }
     }
@@ -108,13 +116,10 @@
     nav.classList.toggle('scrolled', window.scrollY > 50)
   })
 
-  toggle.addEventListener('click', () => {
-    links.classList.toggle('open')
-  })
-
+  toggle.addEventListener('click', () => links.classList.toggle('open'))
   allLinks.forEach(a => a.addEventListener('click', () => links.classList.remove('open')))
 
-  // Active link highlight on scroll
+  // Active link
   const sections = document.querySelectorAll('section[id]')
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY + 120
@@ -179,45 +184,6 @@
 })()
 
 /* ╔══════════════════════════════════════════╗
-   ║          CONTACT FORM (Formspree)        ║
-   ╚══════════════════════════════════════════╝ */
-;(function () {
-  const form = document.getElementById('contactForm')
-  const status = document.getElementById('formStatus')
-  const btnText = form.querySelector('.btn-text')
-  const btnLoad = form.querySelector('.btn-loading')
-
-  form.addEventListener('submit', async e => {
-    e.preventDefault()
-    btnText.style.display = 'none'
-    btnLoad.style.display = 'inline-flex'
-    status.textContent = ''
-    status.className = 'form-status'
-
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      })
-      if (res.ok) {
-        status.textContent = '✅ ส่งเรียบร้อย ขอบคุณครับ!'
-        status.classList.add('success')
-        form.reset()
-      } else {
-        throw new Error('fail')
-      }
-    } catch {
-      status.textContent = '❌ เกิดข้อผิดพลาด ลองใหม่อีกครั้ง'
-      status.classList.add('error')
-    } finally {
-      btnText.style.display = 'inline-flex'
-      btnLoad.style.display = 'none'
-    }
-  })
-})()
-
-/* ╔══════════════════════════════════════════╗
    ║          BACK TO TOP                     ║
    ╚══════════════════════════════════════════╝ */
 ;(function () {
@@ -225,7 +191,5 @@
   window.addEventListener('scroll', () => {
     btn.classList.toggle('show', window.scrollY > 400)
   })
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  })
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))
 })()
